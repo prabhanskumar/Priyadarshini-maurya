@@ -1,0 +1,230 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pridarashini Ultimate Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Playfair+Display:wght@600&display=swap" rel="stylesheet"><style>
+/* RESET */
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+
+body{
+ font-family:'Poppins',sans-serif;
+ background:linear-gradient(135deg,#ffe6f0,#e6fff5);
+ overflow-x:hidden;
+}
+
+/* NAVBAR */
+header{
+ position:fixed;
+ top:0;
+ width:100%;
+ display:flex;
+ justify-content:space-between;
+ padding:20px 40px;
+ background:rgba(255,255,255,0.6);
+ backdrop-filter:blur(12px);
+ z-index:1000;
+}
+.logo{
+ font-family:'Playfair Display',serif;
+ font-size:28px;
+}
+nav a{
+ margin:0 15px;
+ text-decoration:none;
+ color:#333;
+ font-weight:500;
+ position:relative;
+}
+nav a::after{
+ content:"";
+ position:absolute;
+ width:0%;
+ height:2px;
+ bottom:-5px;
+ left:0;
+ background:#ff66a3;
+ transition:0.3s;
+}
+nav a:hover::after{width:100%}
+
+/* HERO */
+.hero{
+ height:100vh;
+ display:flex;
+ flex-direction:column;
+ justify-content:center;
+ align-items:center;
+ text-align:center;
+}
+.typing{
+ font-size:48px;
+ border-right:3px solid;
+ white-space:nowrap;
+ overflow:hidden;
+ animation:typing 4s steps(30),blink .5s infinite alternate;
+}
+@keyframes typing{from{width:0}to{width:100%}}
+@keyframes blink{50%{border-color:transparent}}
+
+.btn{
+ margin-top:20px;
+ padding:12px 30px;
+ border:none;
+ border-radius:30px;
+ background:linear-gradient(45deg,#ff66a3,#66ffcc);
+ color:#fff;
+ cursor:pointer;
+ transition:0.4s;
+}
+.btn:hover{transform:scale(1.1);box-shadow:0 0 25px #ff66a3}
+
+/* SECTIONS */
+.section{
+ padding:100px 20px;
+ text-align:center;
+ opacity:0;
+ transform:translateY(60px);
+ transition:1s;
+}
+.section.show{opacity:1;transform:translateY(0)}
+
+/* CARDS */
+.cards{
+ display:flex;
+ flex-wrap:wrap;
+ justify-content:center;
+ gap:25px;
+}
+.card{
+ width:260px;
+ padding:25px;
+ border-radius:20px;
+ background:rgba(255,255,255,0.7);
+ backdrop-filter:blur(10px);
+ box-shadow:0 10px 25px rgba(0,0,0,0.1);
+ transition:0.4s;
+}
+.card:hover{
+ transform:translateY(-15px) scale(1.05);
+ box-shadow:0 25px 40px rgba(0,0,0,0.2);
+}
+
+/* CRAFT SECTION */
+.craft{
+ display:grid;
+ grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+ gap:20px;
+ padding:20px;
+}
+.craft-item{
+ background:white;
+ padding:20px;
+ border-radius:15px;
+ box-shadow:0 10px 20px rgba(0,0,0,0.1);
+ transition:0.4s;
+}
+.craft-item:hover{transform:scale(1.05)}
+
+/* GALLERY */
+.gallery img{
+ width:100%;
+ border-radius:15px;
+ transition:0.4s;
+}
+.gallery img:hover{transform:scale(1.1)}
+
+/* CONTACT */
+input,textarea{
+ width:90%;
+ padding:12px;
+ margin:10px 0;
+ border-radius:10px;
+ border:1px solid #ccc;
+}
+
+footer{
+ text-align:center;
+ padding:20px;
+ background:#fff;
+}
+
+/* BACKGROUND ANIMATION */
+.bubble{
+ position:absolute;
+ bottom:-100px;
+ width:40px;
+ height:40px;
+ background:rgba(255,255,255,0.3);
+ border-radius:50%;
+ animation:rise 10s infinite;
+}
+@keyframes rise{
+ 0%{transform:translateY(0)}
+ 100%{transform:translateY(-1000px)}
+}
+</style></head><body><div class="bubble" style="left:10%"></div>
+<div class="bubble" style="left:30%"></div>
+<div class="bubble" style="left:60%"></div>
+<div class="bubble" style="left:80%"></div><header>
+ <div class="logo">Pridarashini ✨</div>
+ <nav>
+  <a href="#home">Home</a>
+  <a href="#about">About</a>
+  <a href="#skills">Skills</a>
+  <a href="#craft">Craft</a>
+  <a href="#work">Work</a>
+  <a href="#contact">Contact</a>
+ </nav>
+</header><section id="home" class="hero">
+ <h1 class="typing">Hi, I'm Pridarashini 💕</h1>
+ <p>Creative • Craft Lover • Unique</p>
+ <a href="#about"><button class="btn">Explore</button></a>
+</section><section id="about" class="section">
+ <h2>About Me</h2>
+ <p>I love art, craft and aesthetic creative work.</p>
+</section><section id="skills" class="section">
+ <h2>Skills</h2>
+ <div class="cards">
+  <div class="card">🎨 Craft Design</div>
+  <div class="card">🧵 Handmade Art</div>
+  <div class="card">💻 Creativity</div>
+ </div>
+</section><section id="craft" class="section">
+ <h2>My Craft Work</h2>
+ <div class="craft">
+  <div class="craft-item">Paper Craft</div>
+  <div class="craft-item">DIY Art</div>
+  <div class="craft-item">Decoration</div>
+  <div class="craft-item">Creative Projects</div>
+ </div>
+</section><section id="work" class="section">
+ <h2>Gallery</h2>
+ <div class="craft gallery">
+  <img src="https://via.placeholder.com/300">
+  <img src="https://via.placeholder.com/300">
+  <img src="https://via.placeholder.com/300">
+ </div>
+</section><section id="contact" class="section">
+ <h2>Contact Me</h2>
+ <input type="text" placeholder="Your Name"><br>
+ <input type="email" placeholder="Your Email"><br>
+ <textarea placeholder="Your Message"></textarea><br>
+ <button class="btn">Send</button>
+</section><footer>
+ <p>© 2026 Pridarashini | Crafted with ❤️</p>
+</footer><script>
+const sections=document.querySelectorAll('.section');
+window.addEventListener('scroll',()=>{
+ sections.forEach(sec=>{
+  const top=window.scrollY;
+  const offset=sec.offsetTop-400;
+  const height=sec.offsetHeight;
+  if(top>=offset && top<offset+height){
+   sec.classList.add('show');
+  }
+ });
+});
+</script></body>
+</html>
